@@ -1,5 +1,5 @@
 #Task 2
-#Scrieți un program care sa scrie @nydailybugle.com în loc de @gmail.com.
+#Write a program that replaces the email adress
 
 mail=input("Introdu mail sa te furam: ")
 
