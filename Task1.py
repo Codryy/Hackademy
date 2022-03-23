@@ -1,5 +1,5 @@
 #Task 1
-#Citiți de la tastatură numărul de credite al fiecărei materii (numere întregi), apoi aflați și afișați totalul punctelor de credit.
+#Read from keyboard 4 numbers and then add them togheter
 
 sum = 0
 for i in range(4):
