@@ -1,5 +1,4 @@
 #Task3
-#Scrieți un program care primește de la tastatură media lui Peter și realizează conversia notei în sistemul american
 
 grade = float(input())
 if grade<=0 or grade>=10:  print("Medie gresita!")
