@@ -1,9 +1,4 @@
 #Task5
-#Fie o listă de parole formate din numere sau litere. Să se valideze fiecare parolă după următoarele criterii:
-#lungime minimă de 8 caractere
-#cel puțin o cifră
-#cel puțin un caracter majusculă
-#Se va returna lista de parole invalide.
 
 def password_validation(password_list):
 
@@ -22,6 +17,5 @@ def password_validation(password_list):
       if len(i)<8 or b==0 or c==0:
           invalid_passwords.append(i)
   return invalid_passwords
-# DO NOT MODIFY
-password_list = list(map(str, input().split(' ')))
+password_list=["test", "gdf6sdAvf", "nacsSDsdf", "lungime2FG", "faracifreG", "faramajuscula2", "faracifresimajuscule", "sfg2hGfbghH5645AAbfghbg", "asd54hcfdgF", "bfgv8", "AAAAAA", "7bvnrgr657H4bhg"]
 print(password_validation(password_list))
