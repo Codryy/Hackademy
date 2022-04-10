@@ -1,91 +1,76 @@
-#Task 1
+Online Shopping
 
-It is read a list of natural numbers representing the height of buildings. An observer stands on the first building of the list and looks forward. The buildings are at a distance of one. Write the function observe_buildings that returns the heigth of the last bulding he sees and the distance to it. The result must be a tuple. If there are not any buildings higher that the one the observer sits on, the output will consist of the height of the observer's building and 0.
+With the Black Friday coming up, an online shop of electronics newly established prepared mega discounts and needs help with the logistic of the site. Being at the beginning, the store has a stock made of only two types of products: telephones and refrigerators. Your job is to implement the functionalities necessary to make sure the site runs with no problems.
 
-Exemple 1:
+As example, the shop will have the following functionalities:
 
-Input: heights=[10, 8, 4, 15, 24, 11]
+User side:
 
-Output: max_height=24 max_distance=4
+Once an user logs in, he gets an unic customer_id and cand begin his shopping ( login(self, customer_id) );
 
-Exemple 2:
+He can add products in his cart as long as the product is in the stock. An added product will dissapear from the stock ( add_to_cart(self, customer_id, product_name) );
 
-Input: heights=[100, 8, 3]
+There are situations where the user can change his mind, he does not want to buy a product already in the cart. After a product is eliminated from the cart, he gets restored to the shop stock ( remove_from_cart(self, customer_id, product_name) );
 
-Output: max_height=100 max_distance=0
+The user can see his products from his cart and their price, and if he is not logged in, return an empty list ( view_cart(self, customer_id) );
 
-#Task 2
+In the end, he pays for the products, that means to return the total price of the products in the user's cart, and if the user is not logged in it will return 0         ( checkout(self, customer_id) )
 
-There is a list that contains natural numbers that represents the cost of a cinema ticket and a number of vouchers k. A voucher offers an 100% discount for every type of ticket. Write the function minimum_cost that returs the minimum a client can spend after applying the k vouchers.
+Admin side: Implement a method for the administrator to add products in store stock, double role method, used when the user eliminates from his cart a product           ( add(self,new_product) )
 
-Exemple:
+1. Clas Product:
 
-Input: ticket_costs=[23, 41, 28, 16, 50] k=2
+- overloading "+" operator
 
-Output: min_cost=67
+- returns the sum of the products
 
-#Task 3
+2. Class Phone
+ 
+- overloading "str" method
 
-It is read a natural number that represents the number of movies that received ratings from different internet sites. The rating statistics is represented in the form of a dictionary in which the keys are the movie names. The values are represented by a list that contains integer numbers for movie ratings. We define rating global of a film as the rating average of a movie. Write the global_ratings function which returns a dictionary with the keys as movie names and values as the global rating of every movie.
+3. Class refrigerator
 
-Exemple:
+- overloading "str" method
 
-Input:
+4. Class Stock
 
-ratings = {
-'Bonnie and Clyde' : [8, 9, 10],
-'Inception' : [6, 8, 7]
-}
+- add a new product in stock
 
-Output:
+- erase from the store stock the product given as a parameter
 
-global_ratings = {
-'Bonnie and Clyde' : 9,
-'Inception' : 7
-}
+- return the current stock
 
-#Task 4
+5. Class Cart
 
-As a TikTok developer, you were asked to identify the common friends of users to improve the faimous algorith system. For this, you will need to write the get_common_friends function that receives as parameters lists of friends of the two persons and returns a list that contains the common friends, sorted lexicographical. If the persons don't have any common friends, the list will only contain the string "None".
+- add a product in list_cart
 
-Bonus: Complete the function get_different_friends that returns a lists with the different friends of the two users ( sorted as above ). If the persons don't have any different friends, the list will contain the string "None"
+- erase a product from list_cart
+ 
+- calculate sum of products from the cart
 
-Exemple:
+- clear the cart after calling the cart_checkout function
 
-Input:
+6. Class Store
 
-friends1 = ['Ana', 'Maria', 'Florin', 'Mihai', 'George', 'Ioana', 'Tudor']
+6.1. To do 1:
 
-friends2 = ['Florin', 'Laura', 'Oana', 'Paul', 'Tudor', 'Ana']
+- add a product in an user's cart with his given id; if the user is not logged in, the operation will not go through
 
-Output:
+- once a product is added in the cart it will be erased from the store stock
 
-common = ['Ana', 'Florin', 'Tudor']
+6.2. To do 2:
 
-Bonus:
+- erase a product from the user's cart; if the user is not logged in, the operation will not go through
 
-different = ['George', 'Ioana', 'Laura', 'Maria', 'Mihai', 'Oana', 'Paul']
+- the product will be added again in the store stock
 
-#Tesk 5
+6.3. To do 3:
 
-There is a list with passwords formed of numbers and letters. Write a program that validates every passwords according to the next criterias:
+- return the list of products from user's cart ( name and price )
 
-A max length of 8 characters
-A minimum of one number
-A minimum of one uppercase character
-It will return the list of invalid passwords
+6.4. To do 4:
 
-Exemple:
-
-Input:
-
-password_list = ['alEg0Bb1', 'lAl834dc', 'ILpfd38', 'anaaremere']
-
-Output:
-
-invalid_passwords = ['ILpfd38', 'anaaremere']
-
-Explaining: the password ILpfd38 has less than 8 characters and the passwords anaaremere does not have any special character of number.
+- return the price of the products
 
 
 
