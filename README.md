@@ -1,119 +1,91 @@
 #Task 1
-Before he was famous, Peter Parker studied at Computers and Automatics and was very ambitious. That is why he wants to score full marks of credits score this semester.
 
-His courses on the first semester:
+It is read a list of natural numbers representing the height of buildings. An observer stands on the first building of the list and looks forward. The buildings are at a distance of one. Write the function observe_buildings that returns the heigth of the last bulding he sees and the distance to it. The result must be a tuple. If there are not any buildings higher that the one the observer sits on, the output will consist of the height of the observer's building and 0.
 
-IOCLA
-Electronics
-Sports
-Python
+Exemple 1:
 
-Read from the keyboard the number of credit of every course (integers), then output the sum of the number of credits Peter has to obtain:
+Input: heights=[10, 8, 4, 15, 24, 11]
 
-Example:
+Output: max_height=24 max_distance=4
 
-Input:
-5
-5
-2
-6
+Exemple 2:
 
-Output:
-18
+Input: heights=[100, 8, 3]
+
+Output: max_height=100 max_distance=0
 
 #Task 2
 
-Peter Parker is a photographer at Daily Bugle and he can't remember his email address used to send his boss, J. Jonah Jameson, the best photographs of Spider Man.
-
-He knows it's the same as his personal address and contains @nydailybugle.com instead ofe @gmail.com. Write a program that helps Peter Parker always remember this email address.
-
-#Task 3
-
-Peter Parker is very ambitious and he hopes to go to MIT. For this, he needs to send to MIT his average grade.
-
-Write a program that receives from keyboard Peter's european average grade and returns the grade in american system, as it follows: 
-
-[9, 10] -> A
-
-[8, 9) -> B
-
-[7, 8) -> C
-
-[6, 7) -> D
-
-[5, 6) -> E
-
-[1, 5) -> F
-
-Remarks:
-
-His grade may NOT be an integer number.
-
-If the grade is outside the intervals presented above, the next text will be outputted: "Wrong grade!"
-
-#Task 4
-
-Make a program that reads from keyboard a number N, and then N triplets of X Y T form. Output, on a single line, depending on T, the following:
-
-t = 'i' -> the result of X divided by Y division as integer numbers
-t = 'f' -> the result of X divided by Y as real numbers
-t = 'p' -> the result of X at the power of Y
-
-Example:
-
-Input:
-3
-
-3 2 i
-
-13 2 f
-
-5 3 p
-
-Output:
-
-1 6.5 125
-
-#Task 5
-
-Read from keyboard a pozitive integer number N. For every integers i from the interval [0, N], output the square of i, if i is even, contrary, output i at the power of 3. Output the results on a single line.
-
-Example : N = 4 -> 0 1 4 27 16
-
-#Task 6
-
-Read from keyboard two natural numbers - N1 and N2, with N1 < N2. Output, on a single line, the even numbers between the [N1, N2] interval.
-
-Example: N1 = 2; N2 = 11 -> 4 6 8 10
-
-#Task 7
-
-Peter Parker is fascinated about his double life he has as a superhero. He wants to learn everything the can about his enemies. Help peter to filter through a series of newspapers.
-
-The program receives a title of an article and the name of a villain. Verify if the name of the villain exists in the newspaper article title. If yes, output the next text: length_of_title + ' : ' + 'We found ' + name_of_villain.
-
-Exemple: 'Doctor Octopus strikes again! NY is in danger!', 'Doctor Octopus' -> '51 : We found Doctor Octopus.'
-
-#Task 8
-
-In his last day before he becomes a superhero, Peter discovered palindromes. A palindrom is equal with it's inverse number ( example : 12321).
-
-Given a natural number N, write a program that helps Peter to find out if a number is a palindrome or not and output the following text: ("N is palindrome" or "N is not palindrome").
+There is a list that contains natural numbers that represents the cost of a cinema ticket and a number of vouchers k. A voucher offers an 100% discount for every type of ticket. Write the function minimum_cost that returs the minimum a client can spend after applying the k vouchers.
 
 Exemple:
 
-N = 1234 -> "1234 is not palindrome"
-N = 2789872 -> "2789872 is palindrome"
+Input: ticket_costs=[23, 41, 28, 16, 50] k=2
 
-#Task 9
+Output: min_cost=67
 
-Living a double life as a anonym sueperhero in NY, Peter Parkes wishes to study his original powers. He starts a series of notes about spyders reproduction. He discovered that a pair of spyders produces every day a new pair of spyders which becomes productive at the age of one day. Determine the number of pairs of spyders after N days. Peter found out that his discoveries matches the Fibonacci series.
+#Task 3
 
-Read from the keyboard a positive integer number N, >0 then output the N termen of Fibonacci series which represents the number on pairs of spyders after N days.
+It is read a natural number that represents the number of movies that received ratings from different internet sites. The rating statistics is represented in the form of a dictionary in which the keys are the movie names. The values are represented by a list that contains integer numbers for movie ratings. We define rating global of a film as the rating average of a movie. Write the global_ratings function which returns a dictionary with the keys as movie names and values as the global rating of every movie.
 
-Exemple: N = 10 -> 55
+Exemple:
 
+Input:
 
+ratings = {
+'Bonnie and Clyde' : [8, 9, 10],
+'Inception' : [6, 8, 7]
+}
+
+Output:
+
+global_ratings = {
+'Bonnie and Clyde' : 9,
+'Inception' : 7
+}
+
+#Task 4
+
+As a TikTok developer, you were asked to identify the common friends of users to improve the faimous algorith system. For this, you will need to write the get_common_friends function that receives as parameters lists of friends of the two persons and returns a list that contains the common friends, sorted lexicographical. If the persons don't have any common friends, the list will only contain the string "None".
+
+Bonus: Complete the function get_different_friends that returns a lists with the different friends of the two users ( sorted as above ). If the persons don't have any different friends, the list will contain the string "None"
+
+Exemple:
+
+Input:
+
+friends1 = ['Ana', 'Maria', 'Florin', 'Mihai', 'George', 'Ioana', 'Tudor']
+
+friends2 = ['Florin', 'Laura', 'Oana', 'Paul', 'Tudor', 'Ana']
+
+Output:
+
+common = ['Ana', 'Florin', 'Tudor']
+
+Bonus:
+
+different = ['George', 'Ioana', 'Laura', 'Maria', 'Mihai', 'Oana', 'Paul']
+
+#Tesk 5
+
+There is a list with passwords formed of numbers and letters. Write a program that validates every passwords according to the next criterias:
+
+A max length of 8 characters
+A minimum of one number
+A minimum of one uppercase character
+It will return the list of invalid passwords
+
+Exemple:
+
+Input:
+
+password_list = ['alEg0Bb1', 'lAl834dc', 'ILpfd38', 'anaaremere']
+
+Output:
+
+invalid_passwords = ['ILpfd38', 'anaaremere']
+
+Explaining: the password ILpfd38 has less than 8 characters and the passwords anaaremere does not have any special character of number.
 
 
 
