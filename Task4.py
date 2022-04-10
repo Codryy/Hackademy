@@ -1,8 +1,4 @@
 #Task4
-#Ca developer TikTok, ai fost rugat să identifici prietenii comuni ai utilizatorilor pentru a îmbunătăți faimosul lor algoritm de sugestie. 
-#Pentru asta, va trebui să completezi funcția get_common_friends ce primește ca parametri listele de prieteni ale celor două persoane și întoarce o listă ce conține prietenii lor comuni, sortați lexicografic. Dacă cele două persoane nu au niciun prieten în comun, lista va conține doar string-ul None.
-#BONUS: completează funcția get_different_friends ce returnează o listă cu prietenii diferiți dintre cele două persoane (sortați ca mai devreme). 
-#Dacă cele două persoane nu au niciun prieten diferit, lista va conține string-ul None.
 
 def get_common_friends(friends1, friends2):
   common = []
@@ -42,10 +38,8 @@ def get_different_friends(friends1, friends2):
   if len(different)==0:
       different.append("None")
   return different
-  
 
-# DO NOT MODIFY
-friends1 = list(input().split(' '))
-friends2 = list(input().split(' '))
+friends1=['Ana', 'Maria', 'Florin', 'Mihai', 'George', 'Ioana', 'Tudor']
+friends2=['Florin', 'Laura', 'Oana', 'Paul', 'Tudor', 'Ana']
 print(get_common_friends(friends1, friends2))
 print(get_different_friends(friends1, friends2))
