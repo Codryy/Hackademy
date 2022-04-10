@@ -65,7 +65,7 @@ class Cart:
 class Store:
     def __init__(self, stock):
         self.stock = stock
-        self.customer_carts = dict() #! de explicat in enunt: dict(customer_id, cart)
+        self.customer_carts = dict()
 
     def login(self, customer_id):
         self.customer_carts[customer_id] = Cart()
@@ -76,13 +76,6 @@ class Store:
                   if customer_id in self.customer_carts.keys():
                         self.customer_carts[customer_id].add(product)
                         self.stock.remove(product_name)
-        #    self.customer_carts[customer_id].add(product_name)
-        #if self.customer_id in self.customer_carts:
-        #    self.customer_carts=list(self.customer_carts)
-        #    self.customer_carts.append(self.product_name)
-        #    self.customer_carts=dict(self.customer_carts)
-        #    print(type(self.customer_carts))
-        #    stock.remove(self.product_name)
 
     def remove_from_cart(self, customer_id, product_name):
         if customer_id in self.customer_carts.keys():
@@ -90,14 +83,6 @@ class Store:
                 if product_name == product.name:
                   self.customer_carts[customer_id].remove(product_name)
                   self.stock.add(product)
-        #if self.customer_id in self.customer_carts:
-        #    for i in self.customer_carts:
-        #        if i==self.product_name:
-        #            self.customer_carts[customer_id].remove(i)
-                #    cart=list(self.customer_carts)
-                #    cart.remove(i)
-                #    self.customer_carts=tuple(cart)
-                #    stock.add(self.product_name)
                     
     def view_cart(self, customer_id):
         x=[]
