@@ -1,5 +1,4 @@
 #Task8
-#Dându-se un număr natural N, scrieți un program care să verifice dacă acesta este sau nu palindrom și afișați un mesaj corespunzător ("N este palindrom" sau "N nu este palindrom").
 
 N = int(input())
 C=N
