@@ -1,7 +1,4 @@
 #Task5
-#Se citește de la tastatură un număr întreg pozitiv N. 
-#Pentru toate numerele întregi i ce fac parte din intervalul [0, N], să se afișeze pătratul lui i, dacă acesta este număr par
-# In caz contrar să se afișeze cubul. Rezultatele trebuie pe o singură linie.
 
 N = int(input())
 
