@@ -1,5 +1,4 @@
 #Task 2
-#Write a program that replaces the email adress
 
 mail=input("Introdu mail sa te furam: ")
 
