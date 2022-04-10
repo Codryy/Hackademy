@@ -1,5 +1,4 @@
 #Task6
-#Se citesc două numere naturale - N1 și N2, cu N1 < N2. Să se afișeze pe o singură linie numerele pare dintre ele.
 
 N1 = int(input())
 N2 = int(input())
