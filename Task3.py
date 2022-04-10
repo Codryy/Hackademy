@@ -1,7 +1,7 @@
 #Task3
 
 grade = float(input())
-if grade<=0 or grade>=10:  print("Medie gresita!")
+if grade<=0 or grade>=10:  print("Wrong grade!")
 elif grade>=1 and grade<=4: print("F")
 elif grade>=5 and grade<6: print("E")
 elif grade>=6 and grade<7: print("D")
