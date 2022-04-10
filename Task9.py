@@ -1,5 +1,4 @@
 #Task9
-#Se citește de la tastatură un număr întreg pozitiv N, mai mare strict decât 0 , și să se afișeze al N-lea termen Fibonacci
 
 N = int(input())
 fib1=0
